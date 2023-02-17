@@ -3,14 +3,16 @@
 Pequenas modificações para deixar o Windows terminal mais elegante.
 
 - Exibe apenas o diretorio atual no shell, deixando mais espaço para comandos.
-- Altere a cor padrão do diretório atual.
+- Altera a cor padrão do diretório atual.
 - Redireciona a abertura do terminal para o diretório **C:\DEV**, caso o mesmo seja aberto em pastas do Sistema Operacional.
 
 Antes:
-![Windows Terminal padrão][after] {align=center}
+
+![Windows Terminal padrão][after]
 
 Depois:
-![Windows Terminal tweak][before] {align=center}
+
+![Windows Terminal tweak][before]
 
 ## Requisitos
 

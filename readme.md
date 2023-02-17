@@ -1,10 +1,10 @@
 # Windows Terminal little tweaks
 
-Pequenas modificações para deixar o Windows terminal mais elegante.
+Pequenas modificações para deixar o Windows Terminal mais elegante.
 
-- Exibe apenas o diretorio atual no shell, deixando mais espaço para comandos.
-- Altera a cor padrão do diretório atual.
-- Redireciona a abertura do terminal para o diretório **C:\DEV**, caso o mesmo seja aberto em pastas do Sistema Operacional.
+- Exibe apenas o diretorio atual no Shell, deixando mais espaço para comandos.
+- Altera as cores de texto padrão.
+- Redireciona a abertura do terminal para o diretório **C:\DEV**, caso o mesmo seja aberto em pastas internas do Sistema Operacional.
 
 Antes:
 

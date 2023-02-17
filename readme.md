@@ -8,11 +8,11 @@ Pequenas modificações para deixar o Windows terminal mais elegante.
 
 Antes:
 
-![Windows Terminal padrão][after]
+![Windows Terminal tweak][before]
 
 Depois:
 
-![Windows Terminal tweak][before]
+![Windows Terminal padrão][after]
 
 ## Requisitos
 

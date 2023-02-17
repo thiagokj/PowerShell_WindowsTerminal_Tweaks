@@ -1,0 +1,7 @@
+# Ignore all files and folders in the scripts directory and its subdirectories
+/scripts/*
+!/scripts/.gitkeep
+
+
+
+

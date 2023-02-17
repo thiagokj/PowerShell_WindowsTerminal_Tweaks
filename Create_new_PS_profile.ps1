@@ -8,8 +8,8 @@ if (Test-Path $filePath) {
 }
 
 $newProfileContents = @'
-function setPrompt {
-    $location = (Get-Location).Path
+function formatCurrentLocation {
+    param([string]$location)
     $separator = "\\"
     if ($location.Length -eq 3) {
         return $location[0]
@@ -19,23 +19,37 @@ function setPrompt {
     return $location.Split($separator)[-1]
 }
 
+$securePaths = @("C:\Windows\System32")
+$securePathAccessCount = @{}
+$defaultColor = "Cyan"
+$alertColor = "Red"
+
 function prompt {
-    $securePaths = @("C:\Windows",
-        "C:\Windows\System32",
-        "C:\Program Files",
-        "C:\Program Files (x86)")
-
-    if($securePaths -contains (Get-Location).ProviderPath)
+    $providerPath = (Get-Location).ProviderPath  
+    if($securePaths -contains $providerPath)
     {
-        $devDir = "C:\DEV"
-        if (-not (Test-Path $devDir)) {
-            New-Item -ItemType Directory -Force -Path $devDir
+        if ($securePathAccessCount.ContainsKey($providerPath)) {
+            $securePathAccessCount[$providerPath] += 1
+        } else {
+            $securePathAccessCount[$providerPath] = 1
         }
-        Set-Location -Path $devDir
-    }
+        
+        if ($securePathAccessCount[$providerPath] -gt 1) {
+            Set-Location -Path $providerPath
+        } else {
+            $devDir = "C:\DEV"
+            if (-not (Test-Path $devDir)) {
+                New-Item -ItemType Directory -Force -Path $devDir
+            }
+            Set-Location -Path $devDir
 
-    $shortLocation = setPrompt(Get-Location)
-    Write-Host $shortLocation -nonewline -Foreground Cyan
+            Write-Host "First access to secure location denied. Second attempt is allowed." -ForegroundColor $alertColor
+            Write-Host "$(formatCurrentLocation($devDir))" -NoNewline -ForegroundColor $defaultColor
+            return ' '
+        }
+    }
+    
+    Write-Host "$(formatCurrentLocation(Get-Location))" -NoNewline -ForegroundColor $defaultColor
     return ' '
 }
 

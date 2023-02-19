@@ -18,6 +18,7 @@ $newTerminal = @{
     "suppressApplicationTitle" = $false
     "startingDirectory" = $null
     "tabTitle" = "Windows Terminal"
+    "tabColor" = "#8A2BE2"
     "colorScheme" = "One Half Dark"
 }
 

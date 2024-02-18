@@ -20,8 +20,8 @@ Depois:
 - Windows Terminal
 
 1. Baixe os scripts e o terminal.ico na mesma pasta. Ex: C:\script
-1. Execute o Create_a_profile_to_settings_json.ps1 para criar um novo perfil do terminal.
-1. Execute o Create_new_PS_profile.ps1 para habilitar as configurações no Windows Terminal.
+2. Execute o Create_a_profile_to_settings_json.ps1 para criar um novo perfil do terminal.
+3. Execute o Create_new_PS_profile.ps1 para habilitar as configurações no Windows Terminal.
 
 Obs: Abaixo estão os diretórios com os backups, caso necessário restaurar.
 
@@ -37,5 +37,6 @@ Fique à vontade para fazer modificações e melhorias no script.
 
 Bons estudos e bons códigos! :sunglasses:
 
+<!-- LINKS -->
 [after]: /assets/img/after.png "Windows Terminal modificado"
 [before]: /assets/img/before.png "Windows Terminal padrão"

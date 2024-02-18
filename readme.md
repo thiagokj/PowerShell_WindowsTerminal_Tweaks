@@ -2,7 +2,7 @@
 
 Pequenas modificações para deixar o Windows Terminal mais elegante.
 
-- Exibe apenas o diretorio atual no Shell, deixando mais espaço para comandos.
+- Exibe apenas o diretório atual no Shell, deixando mais espaço para comandos.
 - Altera as cores de texto padrão.
 - Redireciona a abertura do terminal para o diretório **C:\DEV**, caso o mesmo seja aberto em pastas internas do Sistema Operacional.
 

@@ -38,5 +38,7 @@ Fique à vontade para fazer modificações e melhorias no script.
 Bons estudos e bons códigos! :sunglasses:
 
 <!-- LINKS -->
-[after]: /assets/img/after.png "Windows Terminal modificado"
+
+    [after]: /assets/img/after.png "Windows Terminal modificado"
+
 [before]: /assets/img/before.png "Windows Terminal padrão"
